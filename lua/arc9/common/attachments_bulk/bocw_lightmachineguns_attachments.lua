@@ -2017,3 +2017,29 @@ ATT.SpreadMultHipFire = 1.3
 ATT.ActivateElements = {"stockmountgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_m60_stock_raider")
+
+--
+
+ATT = {}
+
+ATT.PrintName = "Stoner 63 Muzzle Device"
+ATT.CompactName = "MUZZLE"
+ATT.Icon = Material("entities/bocw_atts/muzzles/stoner63_muzzle.png", "mips smooth")
+ATT.Description = [[Default Stoner 63 muzzle device.]]
+
+ATT.SortOrder = -10
+
+ATT.Model = "models/weapons/arc9/atts/bocw_stoner63_muzzle.mdl"
+
+ATT.Category = {"bocw_stoner63_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_6"
+ATT.MuzzleParticleOverride_Priority = 1000
+ATT.MuzzleDevice = true
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_stoner63_muzzle_base")
