@@ -16,7 +16,7 @@ oo     .d8P   888 . 888   888  888   888  888    .o  888        `Y88   88P o.   
 ATT = {}
 
 ATT.PrintName = [[16" Cut Down]] --// 1
-ATT.CompactName = [[16" CUTDOWN]]
+ATT.CompactName = [[16" CUT]]
 ATT.Icon = Material("entities/bocw_atts/barrels/stoner63_cutdown.png", "mips smooth")
 ATT.Description = [[Cut down barrel reduces weapon weight. Improves movement speed when firing.
 
@@ -77,7 +77,7 @@ ARC9.LoadAttachment(ATT, "bocw_stoner63_barrel_cavalry")
 ATT = {}
 
 ATT.PrintName = [[18.6" Division]] --// 3
-ATT.CompactName = [[18.6" DIVISION]]
+ATT.CompactName = [[18.6" DVSION]]
 ATT.Icon = Material("entities/bocw_atts/barrels/stoner63_division.png", "mips smooth")
 ATT.Description = [[Shortened steel barrel with button rifling to improve damage and movement speed when firing.
 
@@ -113,7 +113,7 @@ ARC9.LoadAttachment(ATT, "bocw_stoner63_barrel_division")
 ATT = {}
 
 ATT.PrintName = [[16" SOR Cut Down]] --// 4
-ATT.CompactName = [[16" RANGER]]
+ATT.CompactName = [[16" SOR CUT]]
 ATT.Icon = Material("entities/bocw_atts/barrels/stoner63_sorcutdown.png", "mips smooth")
 ATT.Description = [[Cut down steel barrel. Reduced weapon weight maximizes movement speed when firing.
 
@@ -233,7 +233,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeMult = 100/3
+ATT.ClipSizeMult = 100/3*0.04
 
 ATT.ReloadTimeMult = 1.1
 
@@ -287,7 +287,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeMult = 100/3
+ATT.ClipSizeMult = 100/3*0.04
 ATT.ReloadTimeMult = 0.8
 
 ATT.AimDownSightsTimeMult = 1.05
@@ -316,7 +316,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeMult = 200/3
+ATT.ClipSizeMult = 100/3*0.05
 
 ATT.ReloadTimeMult = 1.1
 ATT.AimDownSightsTimeMult = 1.15
@@ -361,7 +361,7 @@ ARC9.LoadAttachment(ATT, "bocw_stoner63_magazine_fastpro")
 ATT = {}
 
 ATT.PrintName = "Salvo 125 Rnd Fast Mag" --// 6
-ATT.CompactName = "125 RND FAST"
+ATT.CompactName = "125 RND SPD"
 ATT.Icon = Material("entities/bocw_atts/magazines/stoner63_mixpro.png", "mips smooth")
 ATT.Description = [[Lightweight snail drum magazine holds a larger ammo belt and improves reload speed.
 
@@ -378,10 +378,10 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeMult = 200/3
+ATT.ClipSizeMult = 100/3*0.05
 ATT.ReloadTimeMult = 0.75
 
-ATT.MultAimDownSightsTime = 1.1
+ATT.AimDownSightsTimeMult = 1.1
 
 ATT.ActivateElements = {"stoner63_mag_mix"}
 
@@ -549,8 +549,6 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.4
 
-ATT.ActivateElements = {"stockmountgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_stoner63_stock_tactical")
 
 ATT = {}
@@ -573,6 +571,8 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SprintToFireTimeMult = 0.85
+
+ATT.ActivateElements = {"stockgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_stoner63_stock_wire")
 
@@ -597,15 +597,13 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMult = 1.05
 
-ATT.ActivateElements = {"stockmountgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_stoner63_stock_duster")
 
 ATT = {}
 
 ATT.PrintName = "No Stock" --// 4
 ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/noicon.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/stocks/stoner63_nostock.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
 The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
@@ -614,9 +612,17 @@ ATT.SortOrder = 3
 
 ATT.Category = "bocw_stoner63_stock"
 
+ATT.Model = "models/weapons/arc9/atts/bocw_stoner63_stock_nostock.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
 ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
+
+ATT.ActivateElements = {"stockgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_stoner63_stock_nostock")
 
@@ -644,8 +650,6 @@ ATT.SpeedMultSighted = 1.75
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockmountgone", "stock_nonretractable"}
-
 ARC9.LoadAttachment(ATT, "bocw_stoner63_stock_sascombat")
 
 ATT = {}
@@ -671,8 +675,6 @@ ATT.SprintToFireTimeMult = 0.7
 ATT.SpeedMultSighted = 1.4
 
 ATT.SpreadMultHipFire = 1.3
-
-ATT.ActivateElements = {"stockmountgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_stoner63_stock_raider")
 --[[

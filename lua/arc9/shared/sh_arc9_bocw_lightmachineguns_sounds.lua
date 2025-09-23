@@ -56,6 +56,21 @@ sound.Add({
     sound = "weapons/arc9/bocw_stoner63/stoner63_reload_topclose.wav"
 })
 
+
+sound.Add({
+    name = "ARC9_BOCW.Stoner63_reload_fast_belt",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_stoner63/stoner63_reload_fast_belt.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.Stoner63_reload_fast_beltbreak",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_stoner63/stoner63_reload_fast_beltbreak.wav"
+})
+
 -- CHARGING HANDLE
 
 sound.Add({

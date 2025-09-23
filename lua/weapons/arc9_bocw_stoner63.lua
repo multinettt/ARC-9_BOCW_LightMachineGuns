@@ -378,6 +378,7 @@ SWEP.CaseBGs = {}
 SWEP.StripperClipBGs = {}
 
 SWEP.HideBones = {
+    "tag_fastmag_attach"
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = {
     [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate"},
@@ -479,49 +480,73 @@ SWEP.AttachmentElements = {
     },
     ["barrelgone"] = {
         Bodygroups = {
-            {3, 1},
+            {4, 1},
         }
     },
     ["stockgone"] = {
         Bodygroups = {
-            {4, 1},
+            {5, 1},
+        }
+    },
+    ["stoner63_mag_ext"] = {
+        Bodygroups = {
+            {6, 1},
+        }
+    },
+    ["stoner63_mag_fast"] = {
+        Bodygroups = {
+            {8, 1},
+        }
+    },
+    ["stoner63_mag_mix"] = {
+        Bodygroups = {
+            {6, 2},
+            {7, 1},
+            {9, 1},
         }
     },
     ["bodymount_lasermix"] = {
         Bodygroups = {
-            {5, 1},
+            {10, 1},
         }
     },
     ["bodymount_flashlight"] = {
         Bodygroups = {
-            {5, 2},
+            {10, 2},
         }
     },
-    ["barrel_extended"] = {
+    ["barrel_cutdown"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.91, 0, 0),
+                Pos = Vector(-5.3, 0, 0),
+            },
+        },
+    },
+    ["barrel_sorcutdown"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-5.3, 0, 0),
             },
         },
     },
     ["barrel_cavalry"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.32, 0, 0),
+                Pos = Vector(-2.76, 0, 0),
             },
         },
     },
-    ["barrel_reinforced"] = {
+    ["barrel_division"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.32, 0, 0),
+                Pos = Vector(-2, 0, 0),
             },
         },
     },
-    ["barrel_ranger"] = {
+    ["barrel_matchgrade"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.96, 0, 0),
+                Pos = Vector(-0.63, 0, 0),
             }
         },
     },
@@ -594,7 +619,7 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(3, 0, 0),
+        Icon_Offset = Vector(11, 0, 0),
         Category = {"bocw_stoner63_barrel"},
         InstalledElements = {"barrelgone"},
     },
@@ -638,7 +663,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-0.75, 0, -0.75),
+        Icon_Offset = Vector(-0.25, 0, -0.25),
         Category = {"bocw_stoner63_wrap"},
     },
     {
@@ -646,7 +671,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-7, 0, 2.5),
+        Icon_Offset = Vector(-2, 0, 3),
         Category = {"bocw_stoner63_stock"},
     },
     {
@@ -677,7 +702,7 @@ SWEP.Attachments = {
         PrintName = "STICKER 4",
         Bone = "tag_clip",
         Category = "stickers",
-        StickerModel = "models/weapons/arc9/stickers/bocw_stoner63_sticker3.mdl",
+        StickerModel = "models/weapons/arc9/stickers/bocw_stoner63_sticker4.mdl",
         CosmeticOnly = true,
     },
 }
@@ -757,7 +782,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Stoner63_ready_start", t = 0 },
             { s = "ARC9_BOCW.Stoner63_boltback", t = 0.5 },
             { s = "ARC9_BOCW.Stoner63_boltforward", t = 0.7 },
-            { s = "ARC9_BOCW.Stoner63_reload_end", t = 1 },
+            { s = "ARC9_BOCW.Stoner63_reload_end", t = 0.9 },
         },
         IKTimeLine = {
             {
@@ -851,9 +876,15 @@ SWEP.Animations = {
         MinProgress = 0.6,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
-            { s = "ARC9_BOCW.Stoner63_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 1.1 },
-            { s = "ARC9_BOCW.Stoner63_reload_end", t = 2 },
+            { s = "ARC9_BOCW.Stoner63_reload_latchopen", t = 0.4 },
+            { s = "ARC9_BOCW.Stoner63_reload_topopen", t = 1 },
+            { s = "ARC9_BOCW.Stoner63_reload_magout", t = 1.65 },
+            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 2.6 },
+            { s = "ARC9_BOCW.Stoner63_reload_topclose", t = 3.9 },
+            { s = "ARC9_BOCW.Stoner63_reload_latchclose", t = 4.6 },
+            { s = "ARC9_BOCW.Stoner63_boltback", t = 5.5 },
+            { s = "ARC9_BOCW.Stoner63_boltforward", t = 5.65 },
+            { s = "ARC9_BOCW.Stoner63_reload_end", t = 5.9 },
         },
         IKTimeLine = {
             {
@@ -884,9 +915,14 @@ SWEP.Animations = {
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
-            { s = "ARC9_BOCW.Stoner63_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.Stoner63_reload_end", t = 2 },
+            { s = "ARC9_BOCW.Stoner63_reload_magout", t = 0.4 },
+            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 1.1 },
+            { s = "ARC9_BOCW.Stoner63_reload_fast_belt", t = 1.6 },
+            { s = "ARC9_BOCW.Stoner63_reload_latchclose", t = 2.6 },
+            { s = "ARC9_BOCW.Stoner63_reload_fast_beltbreak", t = 3.7 },
+            { s = "ARC9_BOCW.Stoner63_boltback", t = 4.4 },
+            { s = "ARC9_BOCW.Stoner63_boltforward", t = 4.55 },
+            { s = "ARC9_BOCW.Stoner63_reload_end", t = 4.8 },
         },
         IKTimeLine = {
             {
@@ -917,9 +953,13 @@ SWEP.Animations = {
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
-            { s = "ARC9_BOCW.Stoner63_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.Stoner63_reload_end", t = 2 },
+            { s = "ARC9_BOCW.Stoner63_reload_topopen", t = 0.4 },
+            { s = "ARC9_BOCW.Stoner63_reload_magout", t = 1.1 },
+            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 1.9 },
+            { s = "ARC9_BOCW.Stoner63_reload_topclose", t = 3.3 },
+            { s = "ARC9_BOCW.Stoner63_boltback", t = 4.4 },
+            { s = "ARC9_BOCW.Stoner63_boltforward", t = 4.55 },
+            { s = "ARC9_BOCW.Stoner63_reload_end", t = 4.8 },
         },
         IKTimeLine = {
             {
