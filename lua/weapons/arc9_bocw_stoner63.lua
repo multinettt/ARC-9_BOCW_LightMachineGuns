@@ -873,7 +873,7 @@ SWEP.Animations = {
     ["reload_ext"] = {
         Source = "reload_ext",
         Time = 6.6,
-        MinProgress = 0.6,
+        MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
             { s = "ARC9_BOCW.Stoner63_reload_latchopen", t = 0.4 },
@@ -912,7 +912,7 @@ SWEP.Animations = {
     ["reload_fast"] = {
         Source = "reload_fast",
         Time = 5.57,
-        MinProgress = 0.65,
+        MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
             { s = "ARC9_BOCW.Stoner63_reload_magout", t = 0.4 },

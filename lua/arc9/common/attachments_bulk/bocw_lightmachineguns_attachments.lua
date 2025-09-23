@@ -972,7 +972,7 @@ ARC9.LoadAttachment(ATT, "bocw_rpd_magazine_mix1")
 
 ATT = {}
 
-ATT.PrintName = "STANAG 100 Rnd Drum" --// 4
+ATT.PrintName = "Spetsnaz 100 Rnd Drum" --// 4
 ATT.CompactName = "100 RND"
 ATT.Icon = Material("entities/bocw_atts/magazines/rpd_extpro.png", "mips smooth")
 ATT.Description = [[Ammo box holds an extended belt with 100 rounds.
@@ -1035,7 +1035,7 @@ ARC9.LoadAttachment(ATT, "bocw_rpd_magazine_fastpro")
 ATT = {}
 
 ATT.PrintName = "VDV 100 Rnd Fast Mag" --// 6
-ATT.CompactName = "100 RND FAST"
+ATT.CompactName = "100 RND SPD"
 ATT.Icon = Material("entities/bocw_atts/magazines/rpd_mixpro.png", "mips smooth")
 ATT.Description = [[Military grade ammo belt container improves reload speed and holds a 100 round belt.
 
@@ -2045,3 +2045,27 @@ ATT.MuzzleDevice = true
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_stoner63_muzzle_base")
+
+ATT = {}
+
+ATT.PrintName = "RPD Muzzle Device"
+ATT.CompactName = "MUZZLE"
+ATT.Icon = Material("entities/bocw_atts/muzzles/rpd_muzzle.png", "mips smooth")
+ATT.Description = [[Default RPD muzzle device.]]
+
+ATT.SortOrder = -10
+
+ATT.Model = "models/weapons/arc9/atts/bocw_rpd_muzzle.mdl"
+
+ATT.Category = {"bocw_rpd_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_1"
+ATT.MuzzleParticleOverride_Priority = 1000
+ATT.MuzzleDevice = true
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_rpd_muzzle_base")

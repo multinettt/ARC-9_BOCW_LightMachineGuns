@@ -168,3 +168,114 @@ sound.Add({
     volume = 1.0,
     sound = "weapons/arc9/bocw_stoner63/stoner63_fire_silenced.wav"
 })
+--[[
+ooooooooo.   ooooooooo.   oooooooooo.   
+`888   `Y88. `888   `Y88. `888'   `Y8b  
+ 888   .d88'  888   .d88'  888      888 
+ 888ooo88P'   888ooo88P'   888      888 
+ 888`88b.     888          888      888 
+ 888  `88b.   888          888     d88' 
+o888o  o888o o888o        o888bood8P'   
+]]
+-- MAGAZINE
+sound.Add({
+    name = "ARC9_BOCW.RPD_reload_magout",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_reload_magout.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_reload_magin",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_reload_magin.wav"
+})
+
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_reload_topopen",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_reload_topopen.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_reload_topclose",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_reload_topclose.wav"
+})
+
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_reload_belt",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_reload_belt.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_reload_fast_belt",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_reload_fast_belt.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_reload_fast_beltpull",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_reload_fast_beltpull.wav"
+})
+
+-- CHARGING HANDLE
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_boltback",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_boltback.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_boltforward",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_boltforward.wav"
+})
+
+-- RELOAD FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_reload_start",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_reload_start.wav"
+})
+
+-- INSPECT FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_inspect",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_inspect.wav"
+})
+-----------------------------------------------
+-- FIRING SOUNDS
+
+sound.Add({ -- BLACK OPS COLD WAR
+    name = "ARC9_BOCW.RPD_fire",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = "weapons/arc9/bocw_rpd/rpd_fire.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.RPD_fire_silenced",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_rpd/rpd_fire_silenced.wav"
+})
