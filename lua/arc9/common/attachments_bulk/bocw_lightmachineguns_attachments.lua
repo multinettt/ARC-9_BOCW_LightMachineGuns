@@ -690,7 +690,7 @@ o888o  o888o o888o        o888bood8P'
 ATT = {}
 
 ATT.PrintName = [[16.5" Cut Down]] --// 1
-ATT.CompactName = [[16.5" CUTDOWN]]
+ATT.CompactName = [[16.5" CUT]]
 ATT.Icon = Material("entities/bocw_atts/barrels/rpd_cutdown.png", "mips smooth")
 ATT.Description = [[Cut down barrel reduces weapon weight. Improves movement speed when firing.
 
@@ -705,6 +705,14 @@ ATT.Model = "models/weapons/arc9/atts/bocw_rpd_barrel_cutdown.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DrawFunc = function(swep, model)
+    local elements = swep:GetElements()
+
+    if elements["optic_mount"] then
+        model:SetBodygroup(1,1)
+    end
+end
 
 ATT.SpeedMultShooting = 1.25
 
@@ -736,6 +744,14 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.DrawFunc = function(swep, model)
+    local elements = swep:GetElements()
+
+    if elements["optic_mount"] then
+        model:SetBodygroup(1,1)
+    end
+end
+
 ATT.DamageTypeOverride = DMG_AIRBOAT
 ATT.ArmorPiercingMult = 2
 
@@ -751,7 +767,7 @@ ARC9.LoadAttachment(ATT, "bocw_rpd_barrel_spetsnazrpk")
 ATT = {}
 
 ATT.PrintName = [[16.5" Division]] --// 3
-ATT.CompactName = [[16.5" DIVISION]]
+ATT.CompactName = [[16.5" DVSION]]
 ATT.Icon = Material("entities/bocw_atts/barrels/rpd_division.png", "mips smooth")
 ATT.Description = [[Shortened steel barrel with button rifling to improve damage and movement speed when firing.
 
@@ -766,6 +782,14 @@ ATT.Model = "models/weapons/arc9/atts/bocw_rpd_barrel_division.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DrawFunc = function(swep, model)
+    local elements = swep:GetElements()
+
+    if elements["optic_mount"] then
+        model:SetBodygroup(1,1)
+    end
+end
 
 ATT.SpeedMultShooting = 1.35
 ATT.DamageMinMult = 1.05
@@ -803,6 +827,14 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.DrawFunc = function(swep, model)
+    local elements = swep:GetElements()
+
+    if elements["optic_mount"] then
+        model:SetBodygroup(1,1)
+    end
+end
+
 ATT.SpeedMultShooting = 1.5
 
 ATT.RangeMinMult = 0.65
@@ -835,6 +867,14 @@ ATT.Model = "models/weapons/arc9/atts/bocw_rpd_barrel_matchgrade.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DrawFunc = function(swep, model)
+    local elements = swep:GetElements()
+
+    if elements["optic_mount"] then
+        model:SetBodygroup(1,1)
+    end
+end
 
 ATT.RangeMinMult = 1.5
 ATT.RangeMaxMult = 1.5
@@ -869,6 +909,14 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.DrawFunc = function(swep, model)
+    local elements = swep:GetElements()
+
+    if elements["optic_mount"] then
+        model:SetBodygroup(1,1)
+    end
+end
+
 ATT.DamageMaxMult = 1.05
 ATT.DamageMinMult = 1.05
 ATT.RangeMinMult = 2
@@ -901,6 +949,7 @@ ATT.SortOrder = 1
 ATT.Category = "bocw_rpd_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_rpd_magazine_ext1.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_rpd_magazine_ext1.mdl"
 
 ATT.Scale = 1
@@ -929,6 +978,7 @@ ATT.SortOrder = 2
 ATT.Category = "bocw_rpd_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_rpd_magazine_fast1.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_rpd_magazine_fast1.mdl"
 
 ATT.Scale = 1
@@ -955,6 +1005,7 @@ ATT.SortOrder = 3
 ATT.Category = "bocw_rpd_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_rpd_magazine_mix1.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_rpd_magazine_mix1.mdl"
 
 ATT.Scale = 1
@@ -984,6 +1035,7 @@ ATT.SortOrder = 4
 ATT.Category = "bocw_rpd_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_rpd_magazine_extpro.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_rpd_magazine_extpro.mdl"
 
 ATT.Scale = 1
@@ -1013,6 +1065,7 @@ ATT.SortOrder = 5
 ATT.Category = "bocw_rpd_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_rpd_magazine_fastpro.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_rpd_magazine_fastpro.mdl"
 
 ATT.Scale = 1
@@ -1046,6 +1099,7 @@ ATT.SortOrder = 6
 ATT.Category = "bocw_rpd_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_rpd_magazine_mixpro.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_rpd_magazine_mixpro.mdl"
 
 ATT.Scale = 1
@@ -1055,7 +1109,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.ClipSizeMult = 2
 ATT.ReloadTimeMult = 0.67
 
-ATT.MultAimDownSightsTime = 1.1
+ATT.AimDownSightsTimeMult = 1.1
 
 ATT.ActivateElements = {"rpd_mag_mix"}
 
@@ -1279,7 +1333,7 @@ ATT = {}
 
 ATT.PrintName = "No Stock" --// 4
 ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/noicon.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/stocks/rpd_nostock.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
 The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
@@ -1287,6 +1341,12 @@ The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives 
 ATT.SortOrder = 3
 
 ATT.Category = "bocw_rpd_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_rpd_stock_nostock.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SprintToFireTimeMult = 0.7
 

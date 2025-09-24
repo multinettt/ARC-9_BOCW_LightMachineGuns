@@ -484,16 +484,17 @@ SWEP.AttachmentElements = {
     ["barrelgone"] = {
         Bodygroups = {
             {4, 1},
+            {7, 1},
         }
     },
     ["stockgone"] = {
         Bodygroups = {
-            {5, 1},
+            {6, 1},
         }
     },
     ["rpd_mag_ext"] = {
         Bodygroups = {
-            {6, 1},
+            {9, 1},
         }
     },
     ["rpd_mag_fast"] = {
@@ -503,9 +504,8 @@ SWEP.AttachmentElements = {
     },
     ["rpd_mag_mix"] = {
         Bodygroups = {
-            {6, 2},
-            {7, 1},
-            {9, 1},
+            {8, 1},
+            {9, 2},
         }
     },
     ["bodymount_lasermix"] = {
@@ -521,37 +521,42 @@ SWEP.AttachmentElements = {
     ["barrel_cutdown"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-5.3, 0, 0),
+                Pos = Vector(-5.2, 0, 0),
             },
         },
+        Bodygroups = {
+            {5, 1},
+        }
     },
-    ["barrel_sorcutdown"] = {
+    ["barrel_grucutdown"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-5.3, 0, 0),
+                Pos = Vector(-8.9, 0, 0),
             },
         },
+        Bodygroups = {
+            {5, 1},
+        }
     },
-    ["barrel_cavalry"] = {
+    ["barrel_spetsnazrpk"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-2.76, 0, 0),
+                Pos = Vector(-5.2, 0, 0),
             },
         },
+        Bodygroups = {
+            {5, 1},
+        }
     },
     ["barrel_division"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-2, 0, 0),
+                Pos = Vector(-5.2, 0, 0),
             },
         },
-    },
-    ["barrel_matchgrade"] = {
-        AttPosMods = {
-            [2] = {
-                Pos = Vector(-0.63, 0, 0),
-            }
-        },
+        Bodygroups = {
+            {5, 1},
+        }
     },
 }
 
@@ -666,7 +671,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-0.25, 0, -0.25),
+        Icon_Offset = Vector(-0.25, 0, -0.5),
         Category = {"bocw_rpd_wrap"},
     },
     {
@@ -674,8 +679,9 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-2, 0, 3),
+        Icon_Offset = Vector(-4, 0, 1.5),
         Category = {"bocw_rpd_stock"},
+        InstalledElements = {"stockgone"},
     },
     {
         PrintName = "CAMO",
@@ -833,18 +839,18 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 6.6,
+        Time = 7.27,
         MagSwapTime = 1.8,
-        MinProgress = 0.65,
+        MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
-            { s = "ARC9_BOCW.RPD_boltback", t = 0.6 },
-            { s = "ARC9_BOCW.RPD_boltforward", t = 0.9 },
-            { s = "ARC9_BOCW.RPD_reload_topopen", t = 1.8 },
-            { s = "ARC9_BOCW.RPD_reload_magout", t = 2.65 },
-            { s = "ARC9_BOCW.RPD_reload_magin", t = 3.6 },
-            { s = "ARC9_BOCW.RPD_reload_belt", t = 4.4 },
-            { s = "ARC9_BOCW.RPD_reload_topclose", t = 5.8 },
+            { s = "ARC9_BOCW.RPD_boltback", t = 0.65 },
+            { s = "ARC9_BOCW.RPD_boltforward", t = 1 },
+            { s = "ARC9_BOCW.RPD_reload_topopen", t = 2 },
+            { s = "ARC9_BOCW.RPD_reload_magout", t = 2.8 },
+            { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
+            { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },
+            { s = "ARC9_BOCW.RPD_reload_topclose", t = 6.4 },
         },
         IKTimeLine = {
             {
@@ -871,18 +877,18 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 6.6,
+        Time = 7.27,
         MagSwapTime = 1.8,
-        MinProgress = 0.65,
+        MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
-            { s = "ARC9_BOCW.RPD_boltback", t = 0.6 },
-            { s = "ARC9_BOCW.RPD_boltforward", t = 0.9 },
-            { s = "ARC9_BOCW.RPD_reload_topopen", t = 1.8 },
-            { s = "ARC9_BOCW.RPD_reload_magout", t = 2.65 },
-            { s = "ARC9_BOCW.RPD_reload_magin", t = 3.6 },
-            { s = "ARC9_BOCW.RPD_reload_belt", t = 4.4 },
-            { s = "ARC9_BOCW.RPD_reload_topclose", t = 5.8 },
+            { s = "ARC9_BOCW.RPD_boltback", t = 0.65 },
+            { s = "ARC9_BOCW.RPD_boltforward", t = 1 },
+            { s = "ARC9_BOCW.RPD_reload_topopen", t = 2 },
+            { s = "ARC9_BOCW.RPD_reload_magout", t = 2.8 },
+            { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
+            { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },
+            { s = "ARC9_BOCW.RPD_reload_topclose", t = 6.4 },
         },
         IKTimeLine = {
             {
@@ -909,19 +915,54 @@ SWEP.Animations = {
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        Time = 6.6,
-        MinProgress = 0.6,
+        Time = 7.27,
+        MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
-            { s = "ARC9_BOCW.RPD_reload_latchopen", t = 0.4 },
-            { s = "ARC9_BOCW.RPD_reload_topopen", t = 1 },
-            { s = "ARC9_BOCW.RPD_reload_magout", t = 1.65 },
-            { s = "ARC9_BOCW.RPD_reload_magin", t = 2.6 },
-            { s = "ARC9_BOCW.RPD_reload_topclose", t = 3.9 },
-            { s = "ARC9_BOCW.RPD_reload_latchclose", t = 4.6 },
-            { s = "ARC9_BOCW.RPD_boltback", t = 5.5 },
-            { s = "ARC9_BOCW.RPD_boltforward", t = 5.65 },
-            { s = "ARC9_BOCW.RPD_reload_end", t = 5.9 },
+            { s = "ARC9_BOCW.RPD_boltback", t = 0.7 },
+            { s = "ARC9_BOCW.RPD_boltforward", t = 1 },
+            { s = "ARC9_BOCW.RPD_reload_topopen", t = 2 },
+            { s = "ARC9_BOCW.RPD_reload_magout", t = 2.8 },
+            { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
+            { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },
+            { s = "ARC9_BOCW.RPD_reload_topclose", t = 6.4 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_empty_ext"] = {
+        Source = "reload_ext_empty",
+        Time = 7.27,
+        MinProgress = 0.95,
+        EventTable = {
+            { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
+            { s = "ARC9_BOCW.RPD_boltback", t = 0.7 },
+            { s = "ARC9_BOCW.RPD_boltforward", t = 1 },
+            { s = "ARC9_BOCW.RPD_reload_topopen", t = 2 },
+            { s = "ARC9_BOCW.RPD_reload_magout", t = 2.8 },
+            { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
+            { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },
+            { s = "ARC9_BOCW.RPD_reload_topclose", t = 6.4 },
         },
         IKTimeLine = {
             {
@@ -948,18 +989,52 @@ SWEP.Animations = {
     },
     ["reload_fast"] = {
         Source = "reload_fast",
-        Time = 5.57,
-        MinProgress = 0.65,
+        Time = 7.27,
+        MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
-            { s = "ARC9_BOCW.RPD_reload_magout", t = 0.4 },
-            { s = "ARC9_BOCW.RPD_reload_magin", t = 1.1 },
-            { s = "ARC9_BOCW.RPD_reload_fast_belt", t = 1.6 },
-            { s = "ARC9_BOCW.RPD_reload_latchclose", t = 2.6 },
-            { s = "ARC9_BOCW.RPD_reload_fast_beltbreak", t = 3.7 },
-            { s = "ARC9_BOCW.RPD_boltback", t = 4.4 },
-            { s = "ARC9_BOCW.RPD_boltforward", t = 4.55 },
-            { s = "ARC9_BOCW.RPD_reload_end", t = 4.8 },
+            { s = "ARC9_BOCW.RPD_boltback", t = 0.2 },
+            { s = "ARC9_BOCW.RPD_boltforward", t = 0.5 },
+            { s = "ARC9_BOCW.RPD_reload_magout", t = 1.6 },
+            { s = "ARC9_BOCW.RPD_reload_magin", t = 3 },
+            { s = "ARC9_BOCW.RPD_reload_fast_belt", t = 3.1 },
+            { s = "ARC9_BOCW.RPD_reload_fast_beltpull", t = 5.8 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_empty_fast"] = {
+        Source = "reload_fast_empty",
+        Time = 7.27,
+        MinProgress = 0.85,
+        EventTable = {
+            { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
+            { s = "ARC9_BOCW.RPD_boltback", t = 0.2 },
+            { s = "ARC9_BOCW.RPD_boltforward", t = 0.5 },
+            { s = "ARC9_BOCW.RPD_reload_magout", t = 1.6 },
+            { s = "ARC9_BOCW.RPD_reload_magin", t = 3 },
+            { s = "ARC9_BOCW.RPD_reload_fast_belt", t = 3.1 },
+            { s = "ARC9_BOCW.RPD_reload_fast_beltpull", t = 5.8 },
         },
         IKTimeLine = {
             {
@@ -986,17 +1061,52 @@ SWEP.Animations = {
     },
     ["reload_mix"] = {
         Source = "reload_mix",
-        Time = 5.57,
-        MinProgress = 0.65,
+        Time = 7.27,
+        MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
-            { s = "ARC9_BOCW.RPD_reload_topopen", t = 0.4 },
-            { s = "ARC9_BOCW.RPD_reload_magout", t = 1.1 },
-            { s = "ARC9_BOCW.RPD_reload_magin", t = 1.9 },
-            { s = "ARC9_BOCW.RPD_reload_topclose", t = 3.3 },
-            { s = "ARC9_BOCW.RPD_boltback", t = 4.4 },
-            { s = "ARC9_BOCW.RPD_boltforward", t = 4.55 },
-            { s = "ARC9_BOCW.RPD_reload_end", t = 4.8 },
+            { s = "ARC9_BOCW.RPD_boltback", t = 0.2 },
+            { s = "ARC9_BOCW.RPD_boltforward", t = 0.5 },
+            { s = "ARC9_BOCW.RPD_reload_magout", t = 1.6 },
+            { s = "ARC9_BOCW.RPD_reload_magin", t = 3 },
+            { s = "ARC9_BOCW.RPD_reload_fast_belt", t = 3.2 },
+            { s = "ARC9_BOCW.RPD_reload_fast_beltpull", t = 5.8 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_empty_mix"] = {
+        Source = "reload_mix_empty",
+        Time = 7.27,
+        MinProgress = 0.85,
+        EventTable = {
+            { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
+            { s = "ARC9_BOCW.RPD_boltback", t = 0.2 },
+            { s = "ARC9_BOCW.RPD_boltforward", t = 0.5 },
+            { s = "ARC9_BOCW.RPD_reload_magout", t = 1.6 },
+            { s = "ARC9_BOCW.RPD_reload_magin", t = 3 },
+            { s = "ARC9_BOCW.RPD_reload_fast_belt", t = 3.2 },
+            { s = "ARC9_BOCW.RPD_reload_fast_beltpull", t = 5.8 },
         },
         IKTimeLine = {
             {
