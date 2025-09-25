@@ -212,7 +212,7 @@ SWEP.RecoilPatternDrift = 10
 
 SWEP.UseVisualRecoil = true
 
-SWEP.VisualRecoil = 1
+SWEP.VisualRecoil = 0.6
 SWEP.VisualRecoilMultSights = 1.2
 
 SWEP.VisualRecoilUp = 0.1
@@ -222,7 +222,7 @@ SWEP.VisualRecoilRoll = 0.1
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 
 SWEP.VisualRecoilPunch = 0.8
-SWEP.VisualRecoilPunchMultSights = 1
+SWEP.VisualRecoilPunchMultSights = 0.8
 
 
 SWEP.NPCWeaponType = "weapon_ar2"
@@ -626,19 +626,19 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_barrel",
-        Pos = Vector(5, 0.8, 1.4),
-        Ang = Angle(0, 0, -10),
+        Pos = Vector(10, 0, -2.24),
+        Ang = Angle(0, 0, 90),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_submachineguns_body_laserwest", "bocw_submachineguns_body_mixwest"},
+        Category = {"bocw_lmg_body_laserwest", "bocw_lmg_body_mixwest"},
         InstalledElements = {"bodymount_lasermix"},
     },
     {
         Hidden = true,
         MergeSlots = {4,5},
         Bone = "tag_barrel",
-        Pos = Vector(4.5, 1.38, 1.49),
+        Pos = Vector(10, 0, -2.57),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_submachineguns_body_flashwest"},
+        Category = {"bocw_lmg_body_flashwest"},
         InstalledElements = {"bodymount_flashlight"},
     },
     {
