@@ -1422,7 +1422,7 @@ o8o        o888o  `88bod8'   `Y8bd8P'
 ATT = {}
 
 ATT.PrintName = [[18" Cut Down]] --// 1
-ATT.CompactName = [[18" CUTDOWN]]
+ATT.CompactName = [[18" CUT]]
 ATT.Icon = Material("entities/bocw_atts/barrels/m60_cutdown.png", "mips smooth")
 ATT.Description = [[Cut down barrel reduces weapon weight. Improves movement speed when firing.
 
@@ -1483,7 +1483,7 @@ ARC9.LoadAttachment(ATT, "bocw_m60_barrel_cavalry")
 ATT = {}
 
 ATT.PrintName = [[18.9" Division]] --// 3
-ATT.CompactName = [[18.9" DIVISION]]
+ATT.CompactName = [[18.9" DVSION]]
 ATT.Icon = Material("entities/bocw_atts/barrels/m60_division.png", "mips smooth")
 ATT.Description = [[Shortened steel barrel with button rifling to improve damage and movement speed when firing.
 
@@ -1519,7 +1519,7 @@ ARC9.LoadAttachment(ATT, "bocw_m60_barrel_division")
 ATT = {}
 
 ATT.PrintName = [[17.5" SOR Cut Down]] --// 4
-ATT.CompactName = [[17.5" RANGER]]
+ATT.CompactName = [[17.5" SOR CUT]]
 ATT.Icon = Material("entities/bocw_atts/barrels/m60_sorcutdown.png", "mips smooth")
 ATT.Description = [[Cut down steel barrel. Reduced weapon weight maximizes movement speed when firing.
 
@@ -1633,13 +1633,14 @@ ATT.SortOrder = 1
 ATT.Category = "bocw_m60_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_m60_magazine_ext1.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_m60_magazine_ext1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeMult = 100/3
+ATT.ClipSizeMult = 100/3*0.04
 
 ATT.ReloadTimeMult = 1.1
 
@@ -1661,6 +1662,7 @@ ATT.SortOrder = 2
 ATT.Category = "bocw_m60_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_m60_magazine_fast1.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_m60_magazine_fast1.mdl"
 
 ATT.Scale = 1
@@ -1687,13 +1689,14 @@ ATT.SortOrder = 3
 ATT.Category = "bocw_m60_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_m60_magazine_mix1.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_m60_magazine_mix1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeMult = 100/3
+ATT.ClipSizeMult = 100/3*0.04
 ATT.ReloadTimeMult = 0.75
 
 ATT.AimDownSightsTimeMult = 1.05
@@ -1716,13 +1719,14 @@ ATT.SortOrder = 4
 ATT.Category = "bocw_m60_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_m60_magazine_extpro.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_m60_magazine_extpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeMult = 200/3
+ATT.ClipSizeMult = 100/3*0.05
 
 ATT.ReloadTimeMult = 1.1
 ATT.AimDownSightsTimeMult = 1.15
@@ -1745,6 +1749,7 @@ ATT.SortOrder = 5
 ATT.Category = "bocw_m60_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_m60_magazine_fastpro.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_m60_magazine_fastpro.mdl"
 
 ATT.Scale = 1
@@ -1767,7 +1772,7 @@ ARC9.LoadAttachment(ATT, "bocw_m60_magazine_fastpro")
 ATT = {}
 
 ATT.PrintName = "Salvo 125 Rnd Fast Mag" --// 6
-ATT.CompactName = "125 RND FAST"
+ATT.CompactName = "125 RND SPD"
 ATT.Icon = Material("entities/bocw_atts/magazines/m60_mixpro.png", "mips smooth")
 ATT.Description = [[Compact ammo box holds a 125 round belt. Improves reload speed.
 
@@ -1778,13 +1783,14 @@ ATT.SortOrder = 6
 ATT.Category = "bocw_m60_mag"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_m60_magazine_mixpro.mdl"
+ATT.ModelBodygroups = "01"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_m60_magazine_mixpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeMult = 200/3
+ATT.ClipSizeMult = 100/3*0.05
 ATT.ReloadTimeMult = 0.7
 
 ATT.MultAimDownSightsTime = 1.1
@@ -1955,8 +1961,6 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.4
 
-ATT.ActivateElements = {"stockmountgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_m60_stock_tactical")
 
 ATT = {}
@@ -2001,8 +2005,6 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ActivateElements = {"stockmountgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_m60_stock_duster")
 
 ATT = {}
@@ -2017,6 +2019,12 @@ The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives 
 ATT.SortOrder = 3
 
 ATT.Category = "bocw_m60_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_m60_stock_nostock.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SprintToFireTimeMult = 0.7
 
@@ -2048,8 +2056,6 @@ ATT.SpeedMultSighted = 1.75
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockmountgone", "stock_nonretractable"}
-
 ARC9.LoadAttachment(ATT, "bocw_m60_stock_sascombat")
 
 ATT = {}
@@ -2075,8 +2081,6 @@ ATT.SprintToFireTimeMult = 0.7
 ATT.SpeedMultSighted = 1.4
 
 ATT.SpreadMultHipFire = 1.3
-
-ATT.ActivateElements = {"stockmountgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_m60_stock_raider")
 

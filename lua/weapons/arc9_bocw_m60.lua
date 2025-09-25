@@ -8,7 +8,7 @@
 
 --   BASE  : ARC9
 --   BUILD : v2025.9
---   SR.NO : 
+--   SR.NO : 02-053
 
 
 ooo        ooooo     .ooo     .oooo.   
@@ -481,29 +481,27 @@ SWEP.AttachmentElements = {
     },
     ["barrelgone"] = {
         Bodygroups = {
-            {4, 1},
+            {5, 1},
         }
     },
     ["stockgone"] = {
         Bodygroups = {
-            {5, 1},
+            {7, 1},
         }
     },
     ["m60_mag_ext"] = {
         Bodygroups = {
-            {6, 1},
+            {8, 1},
         }
     },
     ["m60_mag_fast"] = {
         Bodygroups = {
-            {8, 1},
+            {8, 2},
         }
     },
     ["m60_mag_mix"] = {
         Bodygroups = {
-            {6, 2},
-            {7, 1},
-            {9, 1},
+            {8, 3},
         }
     },
     ["bodymount_lasermix"] = {
@@ -519,37 +517,42 @@ SWEP.AttachmentElements = {
     ["barrel_cutdown"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-5.3, 0, 0),
+                Pos = Vector(-7, 0, -0.02),
             },
         },
+        Bodygroups = {
+            {6, 1},
+        }
     },
     ["barrel_sorcutdown"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-5.3, 0, 0),
+                Pos = Vector(-8.1, 0, -0.02),
             },
         },
+        Bodygroups = {
+            {6, 1},
+        }
     },
     ["barrel_cavalry"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-2.76, 0, 0),
+                Pos = Vector(-5.2, 0, 0.02),
             },
         },
+        Bodygroups = {
+            {6, 1},
+        }
     },
     ["barrel_division"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-2, 0, 0),
+                Pos = Vector(-5.3, 0, 0.01),
             },
         },
-    },
-    ["barrel_matchgrade"] = {
-        AttPosMods = {
-            [2] = {
-                Pos = Vector(-0.63, 0, 0),
-            }
-        },
+        Bodygroups = {
+            {6, 1},
+        }
     },
 }
 
@@ -607,7 +610,7 @@ SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
         Bone = "tag_muzzle",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(0, 0, -0.01),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_m60_muzzle", "bocw_smg_muzzle_west9"},
@@ -674,6 +677,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-10, 0, 3),
         Category = {"bocw_m60_stock"},
+        InstalledElements = {"stockgone"},
     },
     {
         PrintName = "CAMO",
@@ -718,16 +722,12 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     
     local elements = swep:GetElements()
 
-    if elements["m60_mag_ext"] then
-        return anim .. "_ext"
-    end
-
     if elements["m60_mag_fast"] then
         return anim .. "_fast"
     end
 
-    if elements["m60_mag_mix"] then
-        return anim .. "_mix"
+    if elements["bocw_optic_hangmanrf"] or elements["bocw_optic_ultrazoomcustom"] then
+        return anim .. "_hangman"
     end
 end
 
@@ -913,17 +913,15 @@ SWEP.Animations = {
     ["reload_fast"] = {
         Source = "reload_fast",
         Time = 7.17,
-        MinProgress = 0.7,
+        MinProgress = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
             { s = "ARC9_BOCW.M60_reload_magout", t = 0.4 },
-            { s = "ARC9_BOCW.M60_reload_magin", t = 1.1 },
-            { s = "ARC9_BOCW.M60_reload_fast_belt", t = 1.6 },
-            { s = "ARC9_BOCW.M60_reload_latchclose", t = 2.6 },
-            { s = "ARC9_BOCW.M60_reload_fast_beltbreak", t = 3.7 },
-            { s = "ARC9_BOCW.M60_boltback", t = 4.4 },
-            { s = "ARC9_BOCW.M60_boltforward", t = 4.55 },
-            { s = "ARC9_BOCW.M60_reload_end", t = 4.8 },
+            { s = "ARC9_BOCW.M60_reload_magin", t = 1.9 },
+            { s = "ARC9_BOCW.M60_reload_fast_belt", t = 2.7 },
+            { s = "ARC9_BOCW.M60_reload_fast_bolt1", t = 4.8 },
+            { s = "ARC9_BOCW.M60_reload_fast_bolt2", t = 5.6 },
+            { s = "ARC9_BOCW.M60_reload_end", t = 5.8 },
         },
         IKTimeLine = {
             {
@@ -948,19 +946,99 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_scope"] = {
-        Source = "reload_optic",
+    ["reload_empty_fast"] = {
+        Source = "reload_fast_empty",
         Time = 7.17,
-        MinProgress = 0.65,
+        MagSwapTime = 1.5,
+        MinProgress = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
-            { s = "ARC9_BOCW.M60_reload_topopen", t = 0.4 },
-            { s = "ARC9_BOCW.M60_reload_magout", t = 1.1 },
+            { s = "ARC9_BOCW.M60_reload_magout", t = 0.4 },
             { s = "ARC9_BOCW.M60_reload_magin", t = 1.9 },
-            { s = "ARC9_BOCW.M60_reload_topclose", t = 3.3 },
-            { s = "ARC9_BOCW.M60_boltback", t = 4.4 },
-            { s = "ARC9_BOCW.M60_boltforward", t = 4.55 },
-            { s = "ARC9_BOCW.M60_reload_end", t = 4.8 },
+            { s = "ARC9_BOCW.M60_reload_fast_belt", t = 2.7 },
+            { s = "ARC9_BOCW.M60_reload_fast_bolt1", t = 4.8 },
+            { s = "ARC9_BOCW.M60_reload_fast_bolt2", t = 5.6 },
+            { s = "ARC9_BOCW.M60_reload_end", t = 5.8 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_hangman"] = {
+        Source = "reload_optic",
+        Time = 7.17,
+        MinProgress = 0.9,
+        EventTable = {
+            { s = "ARC9_BOCW.M60_reload_start", t = 0 },
+            { s = "ARC9_BOCW.M60_boltback", t = 0.3 },
+            { s = "ARC9_BOCW.M60_boltforward", t = 0.8 },
+            { s = "ARC9_BOCW.M60_reload_topopenstart", t = 1.4 },
+            { s = "ARC9_BOCW.M60_reload_topopen", t = 1.7 },
+            { s = "ARC9_BOCW.M60_reload_magout", t = 2.6 },
+            { s = "ARC9_BOCW.M60_reload_magin", t = 4.1 },
+            { s = "ARC9_BOCW.M60_reload_belt", t = 4.8 },
+            { s = "ARC9_BOCW.M60_reload_topclose", t = 5.9 },
+            { s = "ARC9_BOCW.M60_reload_end", t = 6.6 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_empty_hangman"] = {
+        Source = "reload_optic_empty",
+        Time = 7.17,
+        MagSwapTime = 3.5,
+        MinProgress = 0.9,
+        EventTable = {
+            { s = "ARC9_BOCW.M60_reload_start", t = 0 },
+            { s = "ARC9_BOCW.M60_boltback", t = 0.3 },
+            { s = "ARC9_BOCW.M60_boltforward", t = 0.8 },
+            { s = "ARC9_BOCW.M60_reload_topopenstart", t = 1.4 },
+            { s = "ARC9_BOCW.M60_reload_topopen", t = 1.7 },
+            { s = "ARC9_BOCW.M60_reload_empty_linkflick", t = 2.3 },
+            { s = "ARC9_BOCW.M60_reload_magout", t = 2.9 },
+            { s = "ARC9_BOCW.M60_reload_magin", t = 4.1 },
+            { s = "ARC9_BOCW.M60_reload_belt", t = 4.8 },
+            { s = "ARC9_BOCW.M60_reload_topclose", t = 5.9 },
+            { s = "ARC9_BOCW.M60_reload_end", t = 6.6 },
         },
         IKTimeLine = {
             {
