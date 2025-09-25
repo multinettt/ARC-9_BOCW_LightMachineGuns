@@ -2009,7 +2009,7 @@ ATT = {}
 
 ATT.PrintName = "No Stock" --// 4
 ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/noicon.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/stocks/m60_nostock.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
 The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
@@ -2129,3 +2129,27 @@ ATT.MuzzleDevice = true
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_rpd_muzzle_base")
+
+ATT = {}
+
+ATT.PrintName = "M60 Muzzle Device"
+ATT.CompactName = "MUZZLE"
+ATT.Icon = Material("entities/bocw_atts/muzzles/m60_muzzle.png", "mips smooth")
+ATT.Description = [[Default M60 muzzle device.]]
+
+ATT.SortOrder = -10
+
+ATT.Model = "models/weapons/arc9/atts/bocw_m60_muzzle.mdl"
+
+ATT.Category = {"bocw_m60_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_6"
+ATT.MuzzleParticleOverride_Priority = 1000
+ATT.MuzzleDevice = true
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_m60_muzzle_base")
