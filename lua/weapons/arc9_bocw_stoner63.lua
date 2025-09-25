@@ -715,6 +715,31 @@ SWEP.Attachments = {
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_stoner63_sticker4.mdl",
         CosmeticOnly = true,
+        ExcludeElements = {"stoner63_mag_ext", "stoner63_mag_mix"}
+    },
+    {
+        PrintName = "STICKER 4", 
+        Bone = "tag_clip",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_stoner63_sticker4_ext.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"bocw_stoner63_magazine_ext1"}
+    },
+    {
+        PrintName = "STICKER 4", 
+        Bone = "tag_clip",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_stoner63_sticker4_extpro.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"bocw_stoner63_magazine_extpro"}
+    },
+    {
+        PrintName = "STICKER 4", 
+        Bone = "tag_clip",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_stoner63_sticker4_mix.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"stoner63_mag_mix"}
     },
 }
 

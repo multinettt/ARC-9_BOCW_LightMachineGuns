@@ -704,6 +704,23 @@ SWEP.Attachments = {
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_rpd_sticker3.mdl",
         CosmeticOnly = true,
+        ExcludeElements = {"rpd_mag_ext", "rpd_mag_mix"}
+    },
+    {
+        PrintName = "STICKER 3", 
+        Bone = "tag_clip",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_rpd_sticker3_ext.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"rpd_mag_ext"}
+    },
+    {
+        PrintName = "STICKER 3", 
+        Bone = "tag_clip",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_rpd_sticker3_mix.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"rpd_mag_mix"}
     },
     {
         PrintName = "STICKER 4",

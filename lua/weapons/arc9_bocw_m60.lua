@@ -719,6 +719,39 @@ SWEP.Attachments = {
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_m60_sticker4.mdl",
         CosmeticOnly = true,
+        ExcludeElements = {"m60_mag_ext", "m60_mag_fast", "m60_mag_mix"}
+    },
+    {
+        PrintName = "STICKER 4",
+        Bone = "tag_clip",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_m60_sticker4_ext.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"m60_mag_ext"}
+    },
+    {
+        PrintName = "STICKER 4",
+        Bone = "tag_clip",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_m60_sticker4_fast.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"m60_mag_fast"}
+    },
+    {
+        PrintName = "STICKER 4",
+        Bone = "tag_clip",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_m60_sticker4_mix.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"bocw_m60_magazine_mix1"}
+    },
+    {
+        PrintName = "STICKER 4",
+        Bone = "tag_clip",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_m60_sticker4_mixpro.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"bocw_m60_magazine_mixpro"}
     },
 }
 
@@ -1019,6 +1052,7 @@ SWEP.Animations = {
         Source = "reload_optic",
         Time = 7.17,
         MagSwapTime = 3.5,
+        DropMagAt = 3.5,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -1067,7 +1101,7 @@ SWEP.Animations = {
         Source = "reload_optic_empty",
         Time = 7.17,
         MagSwapTime = 3.5,
-        MagSwapTime = 3.5,
+        DropMagAt = 3.5,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -1081,6 +1115,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M60_reload_belt", t = 4.8 },
             { s = "ARC9_BOCW.M60_reload_topclose", t = 5.9 },
             { s = "ARC9_BOCW.M60_reload_end", t = 6.6 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 3.5 },
+            { hide = 0, t = 3.8 },
         },
         IKTimeLine = {
             {
