@@ -131,7 +131,7 @@ SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "smg1" -- What ammo type this gun uses.
+SWEP.Ammo = "pulse" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 50 -- Self-explanatory.
@@ -617,7 +617,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_rpd_muzzle", "bocw_smg_muzzle_west9"},
+        Category = {"bocw_rpd_muzzle", "bocw_lmg_muzzle_east762"},
         InstalledElements = {"muzzlegone"},
         Installed = "bocw_rpd_muzzle_base",
         Integral = "bocw_rpd_muzzle_base"

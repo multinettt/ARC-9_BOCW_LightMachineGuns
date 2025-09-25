@@ -131,7 +131,7 @@ SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "smg1" -- What ammo type this gun uses.
+SWEP.Ammo = "pulse" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 75 -- Self-explanatory.
@@ -613,7 +613,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, -0.01),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_m60_muzzle", "bocw_smg_muzzle_west9"},
+        Category = {"bocw_m60_muzzle", "bocw_lmg_muzzle_west762"},
         InstalledElements = {"muzzlegone"},
         Installed = "bocw_m60_muzzle_base",
         Integral = "bocw_m60_muzzle_base"
@@ -833,6 +833,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 7.17,
+        MagSwapTime = 3.5,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },

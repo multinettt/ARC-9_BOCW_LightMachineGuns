@@ -12,6 +12,34 @@ Y88bo.      .o888oo  .ooooo.  ooo. .oo.    .ooooo.  oooo d8b     d88'           
 oo     .d8P   888 . 888   888  888   888  888    .o  888        `Y88   88P o.   .88P  
 8""88888P'    "888" `Y8bod8P' o888o o888o `Y8bod8P' d888b        `88bod8'  `8bd88P'   
 ]]
+--========== MUZZLE ===================
+ATT = {}
+
+ATT.PrintName = "Muzzle Brake 5.56"
+ATT.CompactName = "MZLBRK 556"
+ATT.Icon = Material("entities/bocw_atts/muzzles/stoner63_compensator1.png", "mips smooth")
+ATT.Description = [[Redirects gases upwards and to the sides to reduce muzzle rise.
+
+The Muzzle Brake returns in Call of Duty: Black Ops Cold War as a Muzzle attachment available for Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, and Pistols. It increases control over vertical recoil.]]
+
+ATT.SortOrder = 1
+
+ATT.Model = "models/weapons/arc9/atts/bocw_stoner63_muzzle_compensator1.mdl"
+
+ATT.Category = "bocw_stoner63_muzzle"
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_6"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.RecoilUpMult = 0.92
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_stoner63_muzzle_compensator1")
 --========== BARREL ===================
 ATT = {}
 
@@ -1418,6 +1446,64 @@ ooo        ooooo     .ooo     .oooo.
  8    Y     888  `Y88   88P `88b  d88' 
 o8o        o888o  `88bod8'   `Y8bd8P'  
 ]]
+--========== MUZZLE ===================
+ATT = {}
+
+ATT.PrintName = "Muzzle Brake 5.56"
+ATT.CompactName = "MZLBRK 556"
+ATT.Icon = Material("entities/bocw_atts/muzzles/m60_compensator1.png", "mips smooth")
+ATT.Description = [[Redirects gases upwards and to the sides to reduce muzzle rise.
+
+The Muzzle Brake returns in Call of Duty: Black Ops Cold War as a Muzzle attachment available for Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, and Pistols. It increases control over vertical recoil.]]
+
+ATT.SortOrder = 1
+
+ATT.Model = "models/weapons/arc9/atts/bocw_m60_muzzle_compensator1.mdl"
+
+ATT.Category = "bocw_m60_muzzle"
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_6"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.RecoilUpMult = 0.92
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_m60_muzzle_compensator1")
+
+ATT = {}
+
+ATT.PrintName = "Infantry Compensator"
+ATT.CompactName = "INFANTRY"
+ATT.Icon = Material("entities/bocw_atts/muzzles/m60_compensatorpro.png", "mips smooth")
+ATT.Description = [[Lightweight ported compensator expels gases upwards to reduce muzzle rise.
+
+The Infantry Compensator is a Muzzle attachment available for NATO related Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, and Pistols in Call of Duty: Black Ops Cold War. It increases control over vertical recoil at the cost of some horizontal recoil. The Warsaw Pact equivalent is the Spetsnaz Compensator.]]
+
+ATT.SortOrder = 4
+
+ATT.Model = "models/weapons/arc9/atts/bocw_m60_muzzle_compensatorpro.mdl"
+
+ATT.Category = "bocw_m60_muzzle"
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_1"
+ATT.MuzzleParticleOverride_Priority = 1000
+ATT.MuzzleDevice = true
+
+ATT.RecoilUpMult = 0.85
+
+ATT.RecoilSideMult = 1.1
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_m60_muzzle_compensatorpro")
 --========== BARREL ===================
 ATT = {}
 
