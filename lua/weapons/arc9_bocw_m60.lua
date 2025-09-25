@@ -361,7 +361,8 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     "tag_bullet_deplete_sqtl_08_animate",
     "tag_bullet_deplete_sqtl_09_animate",
     "tag_bullet_deplete_sqtl_10_animate",
-    "tag_bullet_deplete_sqtl_11_animate"
+    "tag_bullet_deplete_sqtl_11_animate",
+    "tag_bullet_deplete_sqtl_12_animate"
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -378,7 +379,19 @@ SWEP.HideBones = {
     "tag_fastmag_attach"
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate"},
+    [1] = {"tag_clip", "tag_clip_lid_animate", "tag_bullet_deplete_sqtl_00_animate",
+    "tag_bullet_deplete_sqtl_01_animate",
+    "tag_bullet_deplete_sqtl_02_animate",
+    "tag_bullet_deplete_sqtl_03_animate",
+    "tag_bullet_deplete_sqtl_04_animate",
+    "tag_bullet_deplete_sqtl_05_animate",
+    "tag_bullet_deplete_sqtl_06_animate",
+    "tag_bullet_deplete_sqtl_07_animate",
+    "tag_bullet_deplete_sqtl_08_animate",
+    "tag_bullet_deplete_sqtl_09_animate",
+    "tag_bullet_deplete_sqtl_10_animate",
+    "tag_bullet_deplete_sqtl_11_animate",
+    "tag_bullet_deplete_sqtl_12_animate"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -826,6 +839,7 @@ SWEP.Animations = {
         Source = "reload",
         Time = 7.17,
         MagSwapTime = 3.5,
+        DropMagAt = 3.4,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -833,11 +847,14 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M60_boltforward", t = 0.8 },
             { s = "ARC9_BOCW.M60_reload_topopenstart", t = 1.4 },
             { s = "ARC9_BOCW.M60_reload_topopen", t = 1.7 },
-            { s = "ARC9_BOCW.M60_reload_magout", t = 2.6 },
+            { s = "ARC9_BOCW.M60_reload_magout", t = 2.8 },
             { s = "ARC9_BOCW.M60_reload_magin", t = 4.1 },
             { s = "ARC9_BOCW.M60_reload_belt", t = 4.8 },
             { s = "ARC9_BOCW.M60_reload_topclose", t = 5.9 },
             { s = "ARC9_BOCW.M60_reload_end", t = 6.6 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 3.4 },
+            { hide = 0, t = 3.8 },
         },
         IKTimeLine = {
             {
@@ -871,6 +888,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         Time = 7.17,
         MagSwapTime = 3.5,
+        DropMagAt = 3.5,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -884,6 +902,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M60_reload_belt", t = 4.8 },
             { s = "ARC9_BOCW.M60_reload_topclose", t = 5.9 },
             { s = "ARC9_BOCW.M60_reload_end", t = 6.6 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 3.5 },
+            { hide = 0, t = 3.8 },
         },
         IKTimeLine = {
             {
@@ -916,6 +937,7 @@ SWEP.Animations = {
     ["reload_fast"] = {
         Source = "reload_fast",
         Time = 7.17,
+        DropMagAt = 1.2,
         MinProgress = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -925,6 +947,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M60_reload_fast_bolt1", t = 4.8 },
             { s = "ARC9_BOCW.M60_reload_fast_bolt2", t = 5.6 },
             { s = "ARC9_BOCW.M60_reload_end", t = 5.8 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 1.2 },
+            { hide = 0, t = 1.6 },
         },
         IKTimeLine = {
             {
@@ -953,6 +978,7 @@ SWEP.Animations = {
         Source = "reload_fast_empty",
         Time = 7.17,
         MagSwapTime = 1.5,
+        DropMagAt = 1.2,
         MinProgress = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -962,6 +988,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M60_reload_fast_bolt1", t = 4.8 },
             { s = "ARC9_BOCW.M60_reload_fast_bolt2", t = 5.6 },
             { s = "ARC9_BOCW.M60_reload_end", t = 5.8 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 1.2 },
+            { hide = 0, t = 1.6 },
         },
         IKTimeLine = {
             {
@@ -989,6 +1018,7 @@ SWEP.Animations = {
     ["reload_hangman"] = {
         Source = "reload_optic",
         Time = 7.17,
+        MagSwapTime = 3.5,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -1001,6 +1031,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M60_reload_belt", t = 4.8 },
             { s = "ARC9_BOCW.M60_reload_topclose", t = 5.9 },
             { s = "ARC9_BOCW.M60_reload_end", t = 6.6 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 3.5 },
+            { hide = 0, t = 3.8 },
         },
         IKTimeLine = {
             {
@@ -1033,6 +1066,7 @@ SWEP.Animations = {
     ["reload_empty_hangman"] = {
         Source = "reload_optic_empty",
         Time = 7.17,
+        MagSwapTime = 3.5,
         MagSwapTime = 3.5,
         MinProgress = 0.9,
         EventTable = {

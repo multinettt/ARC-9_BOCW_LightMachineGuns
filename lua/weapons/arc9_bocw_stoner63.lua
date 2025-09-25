@@ -160,7 +160,7 @@ SWEP.DropMagazineTime = 2
 SWEP.DropMagazineQCA = 4 -- QC Attachment drop mag from, would drop from shell port if not defined
 SWEP.DropMagazinePos = Vector(0, 0, 0) -- offsets
 SWEP.DropMagazineAng = Angle(0, -90, -90)
-SWEP.DropMagazineVelocity = Vector(0, -100, 0) -- Put something here if your anim throws the mag with force
+SWEP.DropMagazineVelocity = Vector(0, 0, 0) -- Put something here if your anim throws the mag with force
 
 -------------------------- FIREMODES
 
@@ -381,7 +381,18 @@ SWEP.HideBones = {
     "tag_fastmag_attach"
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate"},
+    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate",
+    "tag_bullet_deplete_sqtl_01_animate",
+    "tag_bullet_deplete_sqtl_02_animate",
+    "tag_bullet_deplete_sqtl_03_animate",
+    "tag_bullet_deplete_sqtl_04_animate",
+    "tag_bullet_deplete_sqtl_05_animate",
+    "tag_bullet_deplete_sqtl_06_animate",
+    "tag_bullet_deplete_sqtl_07_animate",
+    "tag_bullet_deplete_sqtl_08_animate",
+    "tag_bullet_deplete_sqtl_09_animate",
+    "tag_bullet_deplete_sqtl_10_animate",
+    "tag_bullet_deplete_sqtl_11_animate"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -834,6 +845,7 @@ SWEP.Animations = {
         Source = "reload",
         Time = 6.6,
         MagSwapTime = 1.8,
+        DropMagAt = 2.1,
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
@@ -846,6 +858,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Stoner63_boltback", t = 5.5 },
             { s = "ARC9_BOCW.Stoner63_boltforward", t = 5.65 },
             { s = "ARC9_BOCW.Stoner63_reload_end", t = 5.9 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 2.1 },
+            { hide = 0, t = 2.4 },
         },
         IKTimeLine = {
             {
@@ -878,6 +893,7 @@ SWEP.Animations = {
     ["reload_ext"] = {
         Source = "reload_ext",
         Time = 6.6,
+        DropMagAt = 2.1,
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
@@ -890,6 +906,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Stoner63_boltback", t = 5.5 },
             { s = "ARC9_BOCW.Stoner63_boltforward", t = 5.65 },
             { s = "ARC9_BOCW.Stoner63_reload_end", t = 5.9 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 2.1 },
+            { hide = 0, t = 2.4 },
         },
         IKTimeLine = {
             {
@@ -922,6 +941,7 @@ SWEP.Animations = {
     ["reload_fast"] = {
         Source = "reload_fast",
         Time = 6.6,
+        DropMagAt = 1,
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
@@ -933,6 +953,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Stoner63_boltback", t = 5.3 },
             { s = "ARC9_BOCW.Stoner63_boltforward", t = 5.45 },
             { s = "ARC9_BOCW.Stoner63_reload_end", t = 5.7 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 1 },
+            { hide = 0, t = 1.4 },
         },
         IKTimeLine = {
             {
@@ -965,6 +988,7 @@ SWEP.Animations = {
     ["reload_mix"] = {
         Source = "reload_mix",
         Time = 6.6,
+        DropMagAt = 1.9,
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
@@ -975,6 +999,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Stoner63_boltback", t = 5.3 },
             { s = "ARC9_BOCW.Stoner63_boltforward", t = 5.5 },
             { s = "ARC9_BOCW.Stoner63_reload_end", t = 5.7 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 1.9 },
+            { hide = 0, t = 2.2 },
         },
         IKTimeLine = {
             {

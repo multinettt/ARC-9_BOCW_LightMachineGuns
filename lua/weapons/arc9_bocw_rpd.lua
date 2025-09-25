@@ -839,6 +839,7 @@ SWEP.Animations = {
         Source = "reload",
         Time = 7.27,
         MagSwapTime = 2,
+        DropMagAt = 3.2,
         MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -849,6 +850,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
             { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },
             { s = "ARC9_BOCW.RPD_reload_topclose", t = 6.4 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 3.2 },
+            { hide = 0, t = 3.5 },
         },
         IKTimeLine = {
             {
@@ -882,6 +886,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         Time = 7.27,
         MagSwapTime = 1.8,
+        DropMagAt = 3.2,
         MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -892,6 +897,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
             { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },
             { s = "ARC9_BOCW.RPD_reload_topclose", t = 6.4 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 3.2 },
+            { hide = 0, t = 3.5 },
         },
         IKTimeLine = {
             {
@@ -924,6 +932,7 @@ SWEP.Animations = {
     ["reload_ext"] = {
         Source = "reload_ext",
         Time = 7.27,
+        DropMagAt = 3.2,
         MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -934,6 +943,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
             { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },
             { s = "ARC9_BOCW.RPD_reload_topclose", t = 6.4 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 3.2 },
+            { hide = 0, t = 3.5 },
         },
         IKTimeLine = {
             {
@@ -966,6 +978,7 @@ SWEP.Animations = {
     ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
         Time = 7.27,
+        DropMagAt = 3.2,
         MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -976,6 +989,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
             { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },
             { s = "ARC9_BOCW.RPD_reload_topclose", t = 6.4 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 3.2 },
+            { hide = 0, t = 3.5 },
         },
         IKTimeLine = {
             {
@@ -1008,6 +1024,7 @@ SWEP.Animations = {
     ["reload_fast"] = {
         Source = "reload_fast",
         Time = 7.27,
+        DropMagAt = 2.2,
         MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -1017,6 +1034,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.RPD_reload_magin", t = 3 },
             { s = "ARC9_BOCW.RPD_reload_fast_belt", t = 3.1 },
             { s = "ARC9_BOCW.RPD_reload_fast_beltpull", t = 5.8 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 2.2 },
+            { hide = 0, t = 2.4 },
         },
         IKTimeLine = {
             {
@@ -1049,6 +1069,7 @@ SWEP.Animations = {
     ["reload_empty_fast"] = {
         Source = "reload_fast_empty",
         Time = 7.27,
+        DropMagAt = 2.2,
         MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -1058,6 +1079,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.RPD_reload_magin", t = 3 },
             { s = "ARC9_BOCW.RPD_reload_fast_belt", t = 3.1 },
             { s = "ARC9_BOCW.RPD_reload_fast_beltpull", t = 5.8 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 2.2 },
+            { hide = 0, t = 2.4 },
         },
         IKTimeLine = {
             {
@@ -1090,6 +1114,7 @@ SWEP.Animations = {
     ["reload_mix"] = {
         Source = "reload_mix",
         Time = 7.27,
+        DropMagAt = 2.2,
         MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -1099,6 +1124,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.RPD_reload_magin", t = 3 },
             { s = "ARC9_BOCW.RPD_reload_fast_belt", t = 3.2 },
             { s = "ARC9_BOCW.RPD_reload_fast_beltpull", t = 5.8 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 2.2 },
+            { hide = 0, t = 2.4 },
         },
         IKTimeLine = {
             {
@@ -1131,6 +1159,7 @@ SWEP.Animations = {
     ["reload_empty_mix"] = {
         Source = "reload_mix_empty",
         Time = 7.27,
+        DropMagAt = 2.2,
         MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -1140,6 +1169,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.RPD_reload_magin", t = 3 },
             { s = "ARC9_BOCW.RPD_reload_fast_belt", t = 3.2 },
             { s = "ARC9_BOCW.RPD_reload_fast_beltpull", t = 5.8 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 2.2 },
+            { hide = 0, t = 2.4 },
         },
         IKTimeLine = {
             {
