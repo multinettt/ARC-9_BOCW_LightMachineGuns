@@ -131,7 +131,7 @@ SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pulse" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 50 -- Self-explanatory.
@@ -652,10 +652,10 @@ SWEP.Attachments = {
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
-        Pos = Vector(8.6, 0, 1.6),
+        Pos = Vector(-9.5, -4.42, 5.8),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_rpd_mount_underbarrel"},
+        Icon_Offset = Vector(20.25, 4.5, -5),
+        Category = {"bocw_lmg_underbarrel_east"},
     },
     {
         PrintName = "MAGAZINE",
@@ -840,13 +840,13 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 7.27,
-        MagSwapTime = 1.8,
+        MagSwapTime = 2,
         MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
             { s = "ARC9_BOCW.RPD_boltback", t = 0.65 },
             { s = "ARC9_BOCW.RPD_boltforward", t = 1 },
-            { s = "ARC9_BOCW.RPD_reload_topopen", t = 2 },
+            { s = "ARC9_BOCW.RPD_reload_topopen", t = 1.95 },
             { s = "ARC9_BOCW.RPD_reload_magout", t = 2.8 },
             { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
             { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },
@@ -884,7 +884,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
             { s = "ARC9_BOCW.RPD_boltback", t = 0.65 },
             { s = "ARC9_BOCW.RPD_boltforward", t = 1 },
-            { s = "ARC9_BOCW.RPD_reload_topopen", t = 2 },
+            { s = "ARC9_BOCW.RPD_reload_topopen", t = 1.95 },
             { s = "ARC9_BOCW.RPD_reload_magout", t = 2.8 },
             { s = "ARC9_BOCW.RPD_reload_magin", t = 4 },
             { s = "ARC9_BOCW.RPD_reload_belt", t = 4.6 },

@@ -643,11 +643,11 @@ SWEP.Attachments = {
     },
     {
         PrintName = "UNDRBARREL",
-        Bone = "tag_weapon",
-        Pos = Vector(8.6, 0, 1.6),
+        Bone = "tag_charging_handle_animate",
+        Pos = Vector(-20.2, -4.42, 5.2),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_stoner63_mount_underbarrel"},
+        Icon_Offset = Vector(20.25, 4.5, -5),
+        Category = {"bocw_lmg_underbarrel_west"},
     },
     {
         PrintName = "MAGAZINE",
@@ -854,17 +854,22 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.83,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.86,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.9,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.98,
                 lhik = 1,
                 rhik = 0
             },
@@ -893,17 +898,22 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.83,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.86,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.9,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.98,
                 lhik = 1,
                 rhik = 0
             },
@@ -911,18 +921,18 @@ SWEP.Animations = {
     },
     ["reload_fast"] = {
         Source = "reload_fast",
-        Time = 5.57,
+        Time = 6.6,
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
             { s = "ARC9_BOCW.Stoner63_reload_magout", t = 0.4 },
-            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 1.1 },
-            { s = "ARC9_BOCW.Stoner63_reload_fast_belt", t = 1.6 },
-            { s = "ARC9_BOCW.Stoner63_reload_latchclose", t = 2.6 },
-            { s = "ARC9_BOCW.Stoner63_reload_fast_beltbreak", t = 3.7 },
-            { s = "ARC9_BOCW.Stoner63_boltback", t = 4.4 },
-            { s = "ARC9_BOCW.Stoner63_boltforward", t = 4.55 },
-            { s = "ARC9_BOCW.Stoner63_reload_end", t = 4.8 },
+            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 1.4 },
+            { s = "ARC9_BOCW.Stoner63_reload_fast_belt", t = 2.2 },
+            { s = "ARC9_BOCW.Stoner63_reload_latchclose", t = 3.2 },
+            { s = "ARC9_BOCW.Stoner63_reload_fast_beltbreak", t = 4.4 },
+            { s = "ARC9_BOCW.Stoner63_boltback", t = 5.3 },
+            { s = "ARC9_BOCW.Stoner63_boltforward", t = 5.45 },
+            { s = "ARC9_BOCW.Stoner63_reload_end", t = 5.7 },
         },
         IKTimeLine = {
             {
@@ -931,8 +941,8 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
-                lhik = 0,
+                t = 0.6,
+                lhik = 1,
                 rhik = 0
             },
             {
@@ -941,7 +951,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.9,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
                 lhik = 1,
                 rhik = 0
             },
@@ -949,17 +964,17 @@ SWEP.Animations = {
     },
     ["reload_mix"] = {
         Source = "reload_mix",
-        Time = 5.57,
+        Time = 6.6,
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
-            { s = "ARC9_BOCW.Stoner63_reload_topopen", t = 0.4 },
-            { s = "ARC9_BOCW.Stoner63_reload_magout", t = 1.1 },
-            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 1.9 },
-            { s = "ARC9_BOCW.Stoner63_reload_topclose", t = 3.3 },
-            { s = "ARC9_BOCW.Stoner63_boltback", t = 4.4 },
-            { s = "ARC9_BOCW.Stoner63_boltforward", t = 4.55 },
-            { s = "ARC9_BOCW.Stoner63_reload_end", t = 4.8 },
+            { s = "ARC9_BOCW.Stoner63_reload_topopen", t = 0.6 },
+            { s = "ARC9_BOCW.Stoner63_reload_magout", t = 1.3 },
+            { s = "ARC9_BOCW.Stoner63_reload_magin", t = 2.4 },
+            { s = "ARC9_BOCW.Stoner63_reload_topclose", t = 4 },
+            { s = "ARC9_BOCW.Stoner63_boltback", t = 5.3 },
+            { s = "ARC9_BOCW.Stoner63_boltforward", t = 5.5 },
+            { s = "ARC9_BOCW.Stoner63_reload_end", t = 5.7 },
         },
         IKTimeLine = {
             {
@@ -968,17 +983,22 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
                 t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.83,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
                 lhik = 1,
                 rhik = 0
             },

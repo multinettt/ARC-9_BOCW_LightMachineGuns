@@ -131,7 +131,7 @@ SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pulse" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 75 -- Self-explanatory.
@@ -648,10 +648,10 @@ SWEP.Attachments = {
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
-        Pos = Vector(8.6, 0, 1.6),
+        Pos = Vector(-10.5, -4.42, 5.8),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_m60_mount_underbarrel"},
+        Icon_Offset = Vector(20.25, 4.5, -5),
+        Category = {"bocw_lmg_underbarrel_west"},
     },
     {
         PrintName = "MAGAZINE",
