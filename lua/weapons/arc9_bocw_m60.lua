@@ -219,7 +219,7 @@ SWEP.VisualRecoilRoll = 0.1
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 
 SWEP.VisualRecoilPunch = 0.8
-SWEP.VisualRecoilPunchMultSights = 1
+SWEP.VisualRecoilPunchMultSights = 3
 
 
 SWEP.NPCWeaponType = "weapon_ar2"
@@ -748,12 +748,12 @@ SWEP.Animations = {
         Source = "draw",
         IKTimeLine = {
             {
-                t = 0.4,
+                t = 0,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 1,
                 lhik = 1,
                 rhik = 0
             },
@@ -784,16 +784,11 @@ SWEP.Animations = {
         IKTimeLine = {
             {
                 t = 0,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
-                t = 0.5,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.6,
+                t = 1,
                 lhik = 1,
                 rhik = 0
             },
@@ -851,17 +846,22 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.38,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.4,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.9,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.95,
                 lhik = 1,
                 rhik = 0
             },
@@ -892,17 +892,22 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.38,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.42,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.9,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.95,
                 lhik = 1,
                 rhik = 0
             },
@@ -1004,17 +1009,22 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.38,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.4,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.9,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.95,
                 lhik = 1,
                 rhik = 0
             },
@@ -1045,17 +1055,22 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.38,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.4,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.9,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.95,
                 lhik = 1,
                 rhik = 0
             },
@@ -1090,17 +1105,22 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
-                lhik = 0,
+                t = 0.4,
+                lhik = 1,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.45,
                 lhik = 0,
                 rhik = 0
             },
             {
                 t = 0.9,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
                 lhik = 1,
                 rhik = 0
             },
