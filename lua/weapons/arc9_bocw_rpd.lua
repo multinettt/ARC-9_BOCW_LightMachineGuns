@@ -183,7 +183,7 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.8
 SWEP.RecoilSide = 0.2
 SWEP.RecoilUp = 0.3
 
@@ -807,6 +807,25 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = {"ready"},
+        EventTable = {
+            { s = "ARC9_BOCW.RPD_boltback", t = 0.8 },
+            { s = "ARC9_BOCW.RPD_boltforward", t = 1.1 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["ready_ext"] = {
+        Source = {"ready_ext"},
         EventTable = {
             { s = "ARC9_BOCW.RPD_boltback", t = 0.8 },
             { s = "ARC9_BOCW.RPD_boltforward", t = 1.1 },

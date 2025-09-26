@@ -183,12 +183,12 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.2
+SWEP.Recoil = 0.8
+SWEP.RecoilSide = -1.3
 SWEP.RecoilUp = 0.3
 
 SWEP.RecoilRandomUp = 0.01
-SWEP.RecoilRandomSide = 0.01
+SWEP.RecoilRandomSide = 0.03
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern starts to reset.
@@ -1150,12 +1150,21 @@ SWEP.Animations = {
     ["enter_sprint"] = {
         Source = "supersprint_in",
         Time = 0.75,
-        NoStatAffectors = true
+        NoStatAffectors = true,
+        EventTable = {
+            { s = "ARC9_BOCW.M60_sprint_belt", t = 0.1 },
+        },
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
         Time = 2,
-        NoStatAffectors = true
+        NoStatAffectors = true,
+        EventTable = {
+            { s = "ARC9_BOCW.M60_sprint_belt", t = 0.5 },
+            { s = "ARC9_BOCW.M60_sprint_belt", t = 1 },
+            { s = "ARC9_BOCW.M60_sprint_belt", t = 1.5 },
+            { s = "ARC9_BOCW.M60_sprint_belt", t = 2 },
+        },
     },
     ["exit_sprint"] = {
         Source = "sprint_out",

@@ -1879,7 +1879,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.ClipSizeMult = 100/3*0.05
 ATT.ReloadTimeMult = 0.7
 
-ATT.MultAimDownSightsTime = 1.1
+ATT.AimDownSightsTimeMult = 1.1
 
 ATT.ActivateElements = {"m60_mag_mix"}
 
