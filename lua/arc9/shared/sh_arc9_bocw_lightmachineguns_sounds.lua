@@ -377,7 +377,7 @@ sound.Add({
     name = "ARC9_BOCW.M60_reload_start",
     channel = CHAN_AUTO,
     volume = 1.0,
-    sound = "weapons/arc9/bocw_m60/m60_reload_end.wav"
+    sound = "weapons/arc9/bocw_m60/m60_reload_start.wav"
 })
 
 sound.Add({
