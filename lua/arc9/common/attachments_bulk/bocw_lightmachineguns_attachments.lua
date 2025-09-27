@@ -1449,8 +1449,8 @@ o8o        o888o  `88bod8'   `Y8bd8P'
 --========== MUZZLE ===================
 ATT = {}
 
-ATT.PrintName = "Muzzle Brake 5.56"
-ATT.CompactName = "MZLBRK 556"
+ATT.PrintName = "Muzzle Brake 7.62"
+ATT.CompactName = "MZLBRK 762"
 ATT.Icon = Material("entities/bocw_atts/muzzles/m60_compensator1.png", "mips smooth")
 ATT.Description = [[Redirects gases upwards and to the sides to reduce muzzle rise.
 
