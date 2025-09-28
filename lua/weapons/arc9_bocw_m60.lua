@@ -246,11 +246,11 @@ SWEP.ShootWhileSprint = false
 
 SWEP.Speed = 1
 
-SWEP.SpeedMult = 1
-SWEP.SpeedMultSprint = 0.685185185185185
-SWEP.SpeedMultSights = 0.7916666666666667
-SWEP.SpeedMultShooting = 0.95
-SWEP.SpeedMultMelee = 0.8
+SWEP.SpeedMult = 0.95
+SWEP.SpeedMultSprint = 0.6374269005847955
+SWEP.SpeedMultSights = 0.2680311890838207
+SWEP.SpeedMultShooting = 0.6101364522417153
+SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 --SWEP.SpeedMultBlindFire = 1
 
