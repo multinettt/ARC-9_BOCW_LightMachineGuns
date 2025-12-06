@@ -7,7 +7,7 @@
 --   SWEP INFORMATION:
 
 --   BASE  : ARC9
---   BUILD : v2025.9
+--   BUILD : v2025.12
 --   SR.NO : T638CXZ
 
 
