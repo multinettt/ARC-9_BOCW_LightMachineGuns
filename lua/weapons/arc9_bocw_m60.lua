@@ -891,6 +891,7 @@ SWEP.Animations = {
         Time = 7.17,
         MagSwapTime = 3.5,
         DropMagAt = 3.4,
+        FireASAP = 1,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -940,6 +941,7 @@ SWEP.Animations = {
         Time = 7.17,
         MagSwapTime = 3.5,
         DropMagAt = 3.5,
+        FireASAP = 1,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -989,6 +991,7 @@ SWEP.Animations = {
         Source = "reload_fast",
         Time = 7.17,
         DropMagAt = 1.2,
+        FireASAP = 1,
         MinProgress = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -1030,6 +1033,7 @@ SWEP.Animations = {
         Time = 7.17,
         MagSwapTime = 1.5,
         DropMagAt = 1.2,
+        FireASAP = 1,
         MinProgress = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -1071,6 +1075,7 @@ SWEP.Animations = {
         Time = 7.17,
         MagSwapTime = 3.5,
         DropMagAt = 3.5,
+        FireASAP = 1,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },
@@ -1120,6 +1125,7 @@ SWEP.Animations = {
         Time = 7.17,
         MagSwapTime = 3.5,
         DropMagAt = 3.5,
+        FireASAP = 1,
         MinProgress = 0.9,
         EventTable = {
             { s = "ARC9_BOCW.M60_reload_start", t = 0 },

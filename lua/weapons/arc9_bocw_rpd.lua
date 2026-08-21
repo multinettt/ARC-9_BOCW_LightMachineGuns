@@ -894,6 +894,7 @@ SWEP.Animations = {
         Time = 7.27,
         MagSwapTime = 2,
         DropMagAt = 3.2,
+        FireASAP = 1,
         MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -941,6 +942,7 @@ SWEP.Animations = {
         Time = 7.27,
         MagSwapTime = 1.8,
         DropMagAt = 3.2,
+        FireASAP = 1,
         MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -987,6 +989,7 @@ SWEP.Animations = {
         Source = "reload_ext",
         Time = 7.27,
         DropMagAt = 3.2,
+        FireASAP = 1,
         MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -1033,6 +1036,7 @@ SWEP.Animations = {
         Source = "reload_ext_empty",
         Time = 7.27,
         DropMagAt = 3.2,
+        FireASAP = 1,
         MinProgress = 0.95,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -1079,6 +1083,7 @@ SWEP.Animations = {
         Source = "reload_fast",
         Time = 7.27,
         DropMagAt = 2.2,
+        FireASAP = 1,
         MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -1124,6 +1129,7 @@ SWEP.Animations = {
         Source = "reload_fast_empty",
         Time = 7.27,
         DropMagAt = 2.2,
+        FireASAP = 1,
         MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -1169,6 +1175,7 @@ SWEP.Animations = {
         Source = "reload_mix",
         Time = 7.27,
         DropMagAt = 2.2,
+        FireASAP = 1,
         MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },
@@ -1214,6 +1221,7 @@ SWEP.Animations = {
         Source = "reload_mix_empty",
         Time = 7.27,
         DropMagAt = 2.2,
+        FireASAP = 1,
         MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.RPD_reload_start", t = 0 },

@@ -889,6 +889,7 @@ SWEP.Animations = {
         Time = 6.6,
         MagSwapTime = 1.8,
         DropMagAt = 2.1,
+        FireASAP = 1,
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
@@ -937,6 +938,7 @@ SWEP.Animations = {
         Source = "reload_ext",
         Time = 6.6,
         DropMagAt = 2.1,
+        FireASAP = 1,
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
@@ -985,6 +987,7 @@ SWEP.Animations = {
         Source = "reload_fast",
         Time = 6.6,
         DropMagAt = 1,
+        FireASAP = 1,
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
@@ -1032,6 +1035,7 @@ SWEP.Animations = {
         Source = "reload_mix",
         Time = 6.6,
         DropMagAt = 1.9,
+        FireASAP = 1,
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.Stoner63_reload_start", t = 0 },
